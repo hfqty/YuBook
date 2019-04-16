@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">YuBook</string>
+    <string name="new_record">记账</string>
+    <string name="records">记录</string>
+    <string name="action_about">关于</string>
+    <string name="income">收入</string>
+    <string name="pay">支出</string>
+    <string name="all">所有</string>
+    <string name="plus">+</string>
+    <string name="subtract">-</string>
+    <string name="everywhere">随时记录</string>
+    <string name="type">类型</string>
+    <string name="account">账号</string>
+    <string name="amount">金额</string>
+    <string name="remark">备注</string>
+    <string name="time">时间</string>
+
+</resources>
