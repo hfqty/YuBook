@@ -1,2 +1,0 @@
-# YuBook
-MyBook of Money
