@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                Toast.makeText(MainActivity.this, "复制成功，打开微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
             }
         });
-        text_qq_account = findViewById(R.id.text_wechat_account);
+        text_qq_account = findViewById(R.id.text_qq_account);
         text_qq_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
