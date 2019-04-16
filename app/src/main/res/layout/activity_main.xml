@@ -19,7 +19,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:text="@string/new_record"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:background="@drawable/btn_circle"
         style="@style/Widget.AppCompat.Button"></Button>
@@ -31,7 +31,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="@string/records"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:background="@drawable/btn_circle_01"
         style="@style/Widget.AppCompat.Button"></Button>

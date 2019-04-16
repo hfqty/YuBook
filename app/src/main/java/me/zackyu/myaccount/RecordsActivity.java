@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,9 @@ import me.zackyu.myaccount.db.iDBHelper;
 
 public class RecordsActivity extends AppCompatActivity {
 
+    private TextView text_title ;
     private ListView record_listview;
+
     private RecordAdapter recordAdapter;
     private iDBHelper iDBHelper;
     private List<Record> records ;
@@ -45,6 +48,8 @@ public class RecordsActivity extends AppCompatActivity {
         button_records_all = findViewById(R.id.button_records_all);
         button_records_income = findViewById(R.id.button_records_income);
         button_records_pay = findViewById(R.id.button_records_pay);
+        text_title = findViewById(R.id.text_title);
+
 
         record_listview = findViewById(R.id.record_list);
         iDBHelper = new iDBHelper(RecordsActivity.this, DBConstant.NAME,null,1);
@@ -55,6 +60,7 @@ public class RecordsActivity extends AppCompatActivity {
         button_records_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                text_title.setText("所有");
                 getAllRecords();
                 recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records);
                 record_listview.setAdapter(recordAdapter);
@@ -63,6 +69,7 @@ public class RecordsActivity extends AppCompatActivity {
         button_records_income.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                text_title.setText("收入");
                 getIncomeRecords();
                 recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records_income);
                 record_listview.setAdapter(recordAdapter);
@@ -71,6 +78,7 @@ public class RecordsActivity extends AppCompatActivity {
         button_records_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                text_title.setText("支出");
                 getPayRecords();
                 recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records_pay);
                 record_listview.setAdapter(recordAdapter);

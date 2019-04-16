@@ -102,7 +102,7 @@ public class NewPayActivity extends AppCompatActivity {
                         }
                     }, getFragmentManager());
                 }else {
-                    if(amount==0||amount<0) {
+                    if(amount==0||amount>0) {
                         NeutralDialogFragment neutralDialogFragment = new NeutralDialogFragment();
                         neutralDialogFragment.show("提示", "请检查输入的金额！", "确定", new DialogInterface.OnClickListener() {
                             @Override
