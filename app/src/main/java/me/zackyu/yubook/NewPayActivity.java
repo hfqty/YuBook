@@ -110,7 +110,6 @@ public class NewPayActivity extends AppCompatActivity {
                             }
                         }, getFragmentManager());
                     }else{
-                        long insert = sqLiteDatabase.insert(DBConstant.TNAME,null,contentValues);
                         sqLiteDatabase.insert(DBConstant.TNAME, null, contentValues);
                         NeutralDialogFragment neutralDialogFragment = new NeutralDialogFragment();
                         neutralDialogFragment.show("结果", "添加成功", "确定", new DialogInterface.OnClickListener() {
@@ -124,8 +123,6 @@ public class NewPayActivity extends AppCompatActivity {
                     }
                 }
                 //插入数据
-
-
             }
         });
     }
