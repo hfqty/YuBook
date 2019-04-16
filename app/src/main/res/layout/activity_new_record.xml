@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
+        android:layout_gravity="center"
         android:text="@string/new_record"
-        android:textSize="60sp"
+        android:textSize="30sp"
         android:textColor="#000000">
 
     </TextView>
@@ -15,10 +16,10 @@
     <Button
         android:background="@drawable/btn_circle"
         android:id="@+id/button_income"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="@string/income"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:layout_gravity="center_horizontal"
 
@@ -29,11 +30,11 @@
     <Button
         android:background="@drawable/btn_circle_01"
         android:id="@+id/button_pay"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:text="@string/pay"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#ffffff"
         android:layout_gravity="center_horizontal">
 

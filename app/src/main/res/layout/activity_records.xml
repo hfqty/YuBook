@@ -4,11 +4,12 @@ android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="100dp"
         android:text="@string/records"
         android:textColor="#A6000000"
-        android:textSize="60sp"></TextView>
+        android:textSize="30sp"></TextView>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,7 +25,7 @@ android:layout_height="match_parent">
         style="@style/Widget.AppCompat.Button"
         android:text="@string/income"
         android:textColor="#FFFFFF"
-        android:textSize="50px">
+        android:textSize="20sp">
     </Button>
     <Button
         android:background="@drawable/btn_circle_02"
@@ -36,7 +37,7 @@ android:layout_height="match_parent">
         style="@style/Widget.AppCompat.Button"
         android:text="@string/pay"
         android:textColor="#FFFFFF"
-        android:textSize="50px">
+        android:textSize="20sp">
     </Button>
     <Button
         android:background="@drawable/btn_circle_02"
@@ -48,7 +49,7 @@ android:layout_height="match_parent">
         style="@style/Widget.AppCompat.Button"
         android:text="@string/all"
         android:textColor="#FFFFFF"
-        android:textSize="50px">
+        android:textSize="20sp">
     </Button>
 </LinearLayout>
 
@@ -60,7 +61,7 @@ android:layout_height="match_parent">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/all"
-        android:textSize="100px"
+        android:textSize="25sp"
         android:textStyle="bold">
 
     </TextView>
