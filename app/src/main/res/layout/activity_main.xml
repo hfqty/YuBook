@@ -14,8 +14,8 @@
     </TextView>
     <Button
         android:id="@+id/button_new_record"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:text="@string/new_record"
         android:textSize="30sp"
@@ -25,8 +25,8 @@
 
     <Button
         android:id="@+id/button_records"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="@string/records"
@@ -36,7 +36,7 @@
         style="@style/Widget.AppCompat.Button"></Button>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
         android:layout_gravity="center">
@@ -50,12 +50,14 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:text="0"
+            android:text="0.00"
+            android:textColor="#000000"
+
             ></TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:orientation="horizontal"
         android:layout_gravity="center">
         <TextView
@@ -68,12 +70,14 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:text="0"
+            android:text="0.00"
+            android:textColor="#000000"
+
             ></TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:orientation="horizontal"
         android:layout_gravity="center">
         <TextView
@@ -86,8 +90,44 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:text="0"
+            android:text="0.00"
+            android:textColor="#000000"
             ></TextView>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="作者"
+            ></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="Zack Yu"
+            android:textColor="#000000"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="微信"
+            ></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="1059029968"
+            android:textColor="#000000"
+            ></TextView>
+    </LinearLayout>
 </LinearLayout>
