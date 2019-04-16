@@ -36,10 +36,10 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView text_type =view.findViewById(R.id.text_type);
         TextView text_account = view.findViewById(R.id.text_account);
         TextView text_time = view.findViewById(R.id.text_time);
-        text_amount.setText(record.getAmount()+"");
-        text_type.setText(record.getType());
-        text_account.setText(record.getAccount());
-        text_time.setText(simpleDateFormat.format(record.getCrttime()));
+        text_amount.setText("￥ "+record.getAmount()+"");
+        text_type.setText("方式:"+record.getType());
+        text_account.setText("账号:"+record.getAccount());
+        text_time.setText("时间:"+simpleDateFormat.format(record.getCrttime()));
         return view;
     }
 }
