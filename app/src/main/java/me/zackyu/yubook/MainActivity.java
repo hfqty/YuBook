@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView text_total;
 
     private TextView text_wechat_account;
+    private TextView text_qq_account;
 
     private iDBHelper iDBHelper;
     @Override
@@ -42,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
             // 将文本内容放到系统剪贴板里。
                 cm.setText(text_wechat_account.getText());
                Toast.makeText(MainActivity.this, "复制成功，打开微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
+            }
+        });
+        text_qq_account = findViewById(R.id.text_wechat_account);
+        text_qq_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                // 将文本内容放到系统剪贴板里。
+                cm.setText(text_qq_account.getText());
+                Toast.makeText(MainActivity.this, "复制成功，打开qq即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
             }
         });
         iDBHelper = new iDBHelper(MainActivity.this,"MyAccount.db",null,1);
