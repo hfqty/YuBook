@@ -2,6 +2,8 @@ package me.zackyu.myaccount;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView text_pay;
     private TextView text_total;
 
+    private TextView text_wechat_account;
+
     private iDBHelper iDBHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button_new_record = findViewById(R.id.button_new_record);
         button_records = findViewById(R.id.button_records);
+        text_wechat_account = findViewById(R.id.text_wechat_account);
+        text_wechat_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            // 将文本内容放到系统剪贴板里。
+                cm.setText(text_wechat_account.getText());
+               Toast.makeText(MainActivity.this, "微信号复制成功，进入微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
+            }
+        });
         iDBHelper = new iDBHelper(MainActivity.this,"MyAccount.db",null,1);
 
         button_new_record.setOnClickListener(new View.OnClickListener() {

@@ -135,10 +135,11 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:text="微信"
+            android:text="@string/wechat"
             android:textSize="15sp"
             ></TextView>
         <TextView
+            android:id="@+id/text_wechat_account"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
@@ -147,4 +148,10 @@
             android:textSize="15sp"
             ></TextView>
     </LinearLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clickcopy"
+        android:textSize="10sp"></TextView>
 </LinearLayout>
