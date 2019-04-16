@@ -1,4 +1,4 @@
-package me.zackyu.myaccount.db;
+package me.zackyu.yubook.db;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

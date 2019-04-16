@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.math.BigDecimal;
 
-import me.zackyu.myaccount.db.iDBHelper;
+import me.zackyu.yubook.db.iDBHelper;
 
 public class MainActivity extends AppCompatActivity {
     private Button button_new_record;

@@ -1,4 +1,4 @@
-package me.zackyu.myaccount.db;
+package me.zackyu.yubook.db;
 
 import java.util.Date;
 

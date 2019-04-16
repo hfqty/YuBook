@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import org.junit.Test;
 

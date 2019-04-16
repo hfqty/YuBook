@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import me.zackyu.myaccount.db.iDBHelper;
+import me.zackyu.yubook.db.iDBHelper;
 
 public class NewRecordActivity extends AppCompatActivity {
 

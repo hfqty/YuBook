@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,12 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.w3c.dom.Text;
-
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-import me.zackyu.myaccount.db.Record;
+import me.zackyu.yubook.db.Record;
 
 public class RecordAdapter extends ArrayAdapter<Record> {
 

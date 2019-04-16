@@ -1,4 +1,4 @@
-package me.zackyu.myaccount.util;
+package me.zackyu.yubook.util;
 
 import android.app.Dialog;
 import android.app.DialogFragment;

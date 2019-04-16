@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import me.zackyu.myaccount.constant.DBConstant;
-import me.zackyu.myaccount.db.Record;
-import me.zackyu.myaccount.db.iDBHelper;
+import me.zackyu.yubook.constant.DBConstant;
+import me.zackyu.yubook.db.Record;
+import me.zackyu.yubook.db.iDBHelper;
 
 public class RecordsActivity extends AppCompatActivity {
 

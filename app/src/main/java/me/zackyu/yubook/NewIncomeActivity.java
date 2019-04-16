@@ -1,9 +1,8 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -20,9 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import me.zackyu.myaccount.constant.DBConstant;
-import me.zackyu.myaccount.db.iDBHelper;
-import me.zackyu.myaccount.util.NeutralDialogFragment;
+import me.zackyu.yubook.constant.DBConstant;
+import me.zackyu.yubook.db.iDBHelper;
+import me.zackyu.yubook.util.NeutralDialogFragment;
 
 public class NewIncomeActivity extends AppCompatActivity {
 

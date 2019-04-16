@@ -1,4 +1,4 @@
-package me.zackyu.myaccount.constant;
+package me.zackyu.yubook.constant;
 
 public class DBConstant {
     public static final String NAME = "MyAccount.db";

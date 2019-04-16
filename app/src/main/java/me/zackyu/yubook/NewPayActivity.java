@@ -1,4 +1,4 @@
-package me.zackyu.myaccount;
+package me.zackyu.yubook;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -19,9 +19,9 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import me.zackyu.myaccount.constant.DBConstant;
-import me.zackyu.myaccount.db.iDBHelper;
-import me.zackyu.myaccount.util.NeutralDialogFragment;
+import me.zackyu.yubook.constant.DBConstant;
+import me.zackyu.yubook.db.iDBHelper;
+import me.zackyu.yubook.util.NeutralDialogFragment;
 
 public class NewPayActivity extends AppCompatActivity {
 
