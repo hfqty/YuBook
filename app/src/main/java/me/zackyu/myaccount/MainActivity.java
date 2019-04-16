@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             // 将文本内容放到系统剪贴板里。
                 cm.setText(text_wechat_account.getText());
-               Toast.makeText(MainActivity.this, "微信号复制成功，进入微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
+               Toast.makeText(MainActivity.this, "复制成功，打开微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
             }
         });
         iDBHelper = new iDBHelper(MainActivity.this,"MyAccount.db",null,1);
