@@ -15,7 +15,7 @@
     <Button
         android:background="@drawable/btn_circle_01"
         android:id="@+id/button_new_pay_record"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:text="@string/records"
         android:textSize="20sp"

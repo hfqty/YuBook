@@ -17,5 +17,7 @@
     <string name="clickcopy">(点击复制帐号)</string>
     <string name="wechat">微信</string>
     <string name="qq">企鹅</string>
+    <string name="myname">Yerik Zhang</string>
+    <string name="author">作者</string>
 
 </resources>
