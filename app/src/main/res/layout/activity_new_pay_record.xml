@@ -7,6 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="@string/pay"
         android:textColor="#000000"
@@ -16,7 +17,7 @@
         android:background="@drawable/btn_circle_01"
         android:id="@+id/button_new_pay_record"
         android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:text="@string/records"
         android:textSize="20sp"
         android:textColor="#ffffff"
@@ -24,11 +25,11 @@
     </Button>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="@string/type"
             android:textSize="20sp"
             android:textColor="#000000">
@@ -37,14 +38,14 @@
         <Spinner
             android:id="@+id/new_pay_type"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:entries="@array/pay_type"
             android:textColor="#000000"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -56,18 +57,18 @@
         <EditText
             android:id="@+id/new_pay_account"
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="50dp">
 
         </EditText>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="@string/amount"
             android:textSize="20sp"
             android:textColor="#000000">
@@ -75,18 +76,18 @@
         <EditText
             android:id="@+id/new_pay_amount"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:inputType="numberDecimal">
 
         </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:text="@string/remark"
             android:textSize="20sp"
             android:textColor="#000000">
@@ -94,7 +95,7 @@
         <EditText
             android:id="@+id/new_pay_remark"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:inputType="text">
 
         </EditText>

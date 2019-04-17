@@ -4,7 +4,7 @@
 <!--    <corners android:radius="50dp" />-->
     <!-- 矩形的填充色 -->
     <corners android:topLeftRadius="50dp" android:bottomLeftRadius="50dp"/>
-    <solid android:color="#99D22222" />
+    <solid android:color="#99D50000" />
 
     <!-- 矩形的边框的宽度,每段虚线的长度，和两段虚线之间的颜色和颜色 -->
     <!--    <stroke-->

@@ -36,7 +36,6 @@ public class NewRecordActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(NewRecordActivity.this,NewIncomeActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         button_pay.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +44,6 @@ public class NewRecordActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(NewRecordActivity.this,NewPayActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
