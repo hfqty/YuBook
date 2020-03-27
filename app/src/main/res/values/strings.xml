@@ -23,5 +23,7 @@
     <string name="about_me">关于我</string>
     <string name="about_app">关于应用</string>
     <string name="intro_app">一个简洁优雅的记账应用</string>
+    <string name="version_string">应用版本</string>
+    <string name="version">1.1</string>
 
 </resources>
