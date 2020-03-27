@@ -17,8 +17,8 @@ public class AboutMeActivity extends AppCompatActivity {
     private TextView text_qq_account;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
         text_wechat_account = findViewById(R.id.text_wechat_account);
         text_wechat_account.setOnClickListener(new View.OnClickListener() {
@@ -41,4 +41,6 @@ public class AboutMeActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
