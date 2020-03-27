@@ -8,7 +8,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="99dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="@string/income"
@@ -28,11 +28,12 @@
         ></Button>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="77dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="77dp"
             android:text="@string/incometype"
             android:textSize="20sp"
             android:textColor="#000000">
@@ -44,11 +45,12 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:entries="@array/income_type"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textAlignment="center"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="77dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +70,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="77dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -87,7 +89,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="77dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
