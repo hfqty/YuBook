@@ -22,6 +22,7 @@
         <activity android:name="me.zackyu.yubook.RecordsActivity"></activity>
         <activity android:name="me.zackyu.yubook.NewPayActivity"></activity>
         <activity android:name="me.zackyu.yubook.NewIncomeActivity"></activity>
+        <activity android:name="me.zackyu.yubook.AboutMeActivity"></activity>
     </application>
 
 </manifest>

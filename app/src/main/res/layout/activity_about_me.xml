@@ -10,100 +10,107 @@
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:text="@string/everywhere"
+        android:text="@string/about"
         android:textColor="#000000"
         android:textSize="30sp">
     </TextView>
-    <Button
-        android:id="@+id/button_new_record"
-        android:layout_width="200dp"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:text="@string/new_record"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
-        android:background="@drawable/btn_circle"
-        style="@style/Widget.AppCompat.Button"></Button>
+        android:text="@string/about_me"
+        android:textColor="#000000"
+        android:textSize="19sp">
 
-    <Button
-        android:id="@+id/button_records"
-        android:layout_width="200dp"
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+       >
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/author"
+            android:textSize="15sp"
+
+            ></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="@string/myname"
+            android:textColor="#000000"
+            android:textSize="15sp"
+
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/wechat"
+            android:textSize="15sp"
+            ></TextView>
+        <TextView
+            android:id="@+id/text_wechat_account"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="1059029968"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="@string/qq"
+            android:textSize="15sp"
+            ></TextView>
+        <TextView
+            android:id="@+id/text_qq_account"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:text="1059029968"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            ></TextView>
+    </LinearLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clickcopy"
+        android:textSize="10sp"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="@string/records"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
-        android:background="@drawable/btn_circle_01"
-        style="@style/Widget.AppCompat.Button"></Button>
-    <LinearLayout
+        android:text="@string/about_app"
+        android:textColor="#000000"
+        android:textSize="19sp">
+    </TextView>
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_app"
         android:layout_gravity="center">
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:text="@string/income"
-            android:textSize="20sp"
-           ></TextView>
-        <TextView
-            android:id="@+id/text_income"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:text="0.00"
-            android:textColor="#000000"
-            android:textSize="20sp"
 
-            ></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:text="@string/pay"
-            android:textSize="20sp"
-
-            ></TextView>
-        <TextView
-            android:id="@+id/text_pay"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:text="0.00"
-            android:textColor="#000000"
-            android:textSize="20sp"
-
-            ></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:text="结余"
-            android:textSize="20sp"
-
-            ></TextView>
-        <TextView
-            android:id="@+id/text_total"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:text="0.00"
-            android:textColor="#000000"
-            android:textSize="20sp"
-
-            ></TextView>
-    </LinearLayout>
-
+    </TextView>
 </LinearLayout>
