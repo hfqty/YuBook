@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:text="@string/everywhere"
         android:textColor="#000000"
-        android:textSize="30sp">
+        android:textSize="30dp">
     </TextView>
     <Button
         android:id="@+id/button_new_record"
@@ -20,7 +20,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:text="@string/new_record"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textColor="#ffffff"
         android:background="@drawable/btn_circle"
         style="@style/Widget.AppCompat.Button"></Button>
@@ -32,7 +32,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="@string/records"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textColor="#ffffff"
         android:background="@drawable/btn_circle_01"
         style="@style/Widget.AppCompat.Button"></Button>
@@ -68,7 +68,7 @@
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="@string/pay"
-            android:textSize="20sp"
+            android:textSize="20dp"
 
             ></TextView>
         <TextView
@@ -78,7 +78,7 @@
             android:layout_marginLeft="30dp"
             android:text="0.00"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="20dp"
 
             ></TextView>
     </LinearLayout>
@@ -91,7 +91,7 @@
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="结余"
-            android:textSize="20sp"
+            android:textSize="20dp"
 
             ></TextView>
         <TextView
@@ -101,9 +101,20 @@
             android:layout_marginLeft="30dp"
             android:text="0.00"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="20dp"
 
             ></TextView>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_about_me"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
+        android:text="@string/about_app"
+        android:textColor="#000000"
+        android:textSize="13dp">
+    </TextView>
 
 </LinearLayout>

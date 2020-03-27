@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView text_pay;
     private TextView text_total;
 
+    private TextView textview_about_me;
     private iDBHelper iDBHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button_new_record = findViewById(R.id.button_new_record);
         button_records = findViewById(R.id.button_records);
-
+        textview_about_me = findViewById(R.id.textview_about_me);
+        String html = "<u>关于应用</u>";
+        textview_about_me.setText(Html.fromHtml(html));
+        textview_about_me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,AboutMeActivity.class);
+                startActivity(intent);
+            }
+        });
         iDBHelper = new iDBHelper(MainActivity.this,"MyAccount.db",null,1);
 
         button_new_record.setOnClickListener(new View.OnClickListener() {
