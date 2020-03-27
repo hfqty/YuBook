@@ -25,5 +25,12 @@
     <string name="intro_app">一个简洁优雅的记账应用</string>
     <string name="version_string">应用版本</string>
     <string name="version">1.1</string>
-
+    <string name="incometype">收入类型</string>
+    <string name="incomeaccount">收入账号</string>
+    <string name="incomeamount">收入金额</string>
+    <string name="incomeremark">收入备注</string>
+    <string name="paytype">支出类型</string>
+    <string name="payaccount">支出账号</string>
+    <string name="payamount">支出金额</string>
+    <string name="payremark">支出备注</string>
 </resources>
