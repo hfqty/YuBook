@@ -34,10 +34,14 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView text_type =view.findViewById(R.id.text_type);
         TextView text_account = view.findViewById(R.id.text_account);
         TextView text_time = view.findViewById(R.id.text_time);
+        TextView text_source = view.findViewById(R.id.text_source);
         text_amount.setText("￥ "+record.getAmount()+"");
-        text_type.setText("方式:"+record.getType());
+        //2023年9月18日 10点46分 添加新功能
+        text_source.setText("金钱来源:"+record.getSource());
+        text_type.setText("金钱去向:"+record.getType());
         text_account.setText("账号:"+record.getAccount());
         text_time.setText("时间:"+simpleDateFormat.format(record.getCrttime()));
+
         return view;
     }
 }

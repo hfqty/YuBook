@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YuBook</string>
+    <string name="app_name">微账单</string>
     <string name="new_record">记账</string>
     <string name="records">记录</string>
     <string name="action_about">关于</string>
@@ -16,21 +16,23 @@
     <string name="time">时间</string>
     <string name="clickcopy">(点击复制帐号)</string>
     <string name="wechat">微信</string>
-    <string name="qq">企鹅</string>
-    <string name="myname">YuZhang</string>
+    <string name="qq">QQ</string>
+    <string name="wechat_no">Muscledontgrowinaday</string>
+    <string name="qq_no">7840041</string>
+    <string name="myname">张 宇</string>
     <string name="author">作者</string>
     <string name="about">关于</string>
-    <string name="about_me">关于我</string>
+    <string name="about_me">关于作者</string>
     <string name="about_app">关于应用</string>
     <string name="intro_app">一个简洁优雅的记账应用</string>
     <string name="version_string">应用版本</string>
-    <string name="version">1.1</string>
-    <string name="incometype">收入类型</string>
+    <string name="version">1.2</string>
+    <string name="incomesource">收入去向</string>
     <string name="incomeaccount">收入账号</string>
     <string name="incomeamount">收入金额</string>
-    <string name="incomeremark">收入备注</string>
-    <string name="paytype">支出类型</string>
+    <string name="incometype">收入来源</string>
+    <string name="paysource">支出来源</string>
     <string name="payaccount">支出账号</string>
     <string name="payamount">支出金额</string>
-    <string name="payremark">支出备注</string>
+    <string name="paytype">支出去向</string>
 </resources>

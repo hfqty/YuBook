@@ -28,12 +28,12 @@ public class NewIncomeActivity extends AppCompatActivity {
     private Spinner new_income_type;
     private EditText new_income_account;
     private EditText new_income_amount;
-    private EditText new_income_remark;
+    private Spinner new_income_source;
 
     private String type;
     private String account;
     private Double amount;
-    private String remark;
+    private String source;
     private Date crttime = new Date();
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -44,14 +44,15 @@ public class NewIncomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_income_record);
         button_new_income_record = findViewById(R.id.button_new_income_record);
-        new_income_type = findViewById(R.id.income_spinner);
+        new_income_source = findViewById(R.id.new_income_source);
+        new_income_type = findViewById(R.id.new_income_type);
         new_income_account = findViewById(R.id.new_income_account);
         new_income_amount = findViewById(R.id.new_income_amount);
-        new_income_remark = findViewById(R.id.new_income_remark);
-       new_income_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+       new_income_source.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
            @Override
            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               type = NewIncomeActivity.this.getResources().getStringArray(R.array.income_type)[position];
+                type = NewIncomeActivity.this.getResources().getStringArray(R.array.income_from)[position];
 
            }
 
@@ -60,7 +61,18 @@ public class NewIncomeActivity extends AppCompatActivity {
 
            }
        });
+        new_income_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                source =  NewIncomeActivity.this.getResources().getStringArray(R.array.income_to)[position];
 
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         button_new_income_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,15 +84,15 @@ public class NewIncomeActivity extends AppCompatActivity {
                 }else{
                     amount = Double.parseDouble(str_amount);
                 }
-                remark = new_income_remark.getText().toString();
+
 
                 iDBHelper = new iDBHelper(NewIncomeActivity.this, DBConstant.NAME,null,1);
                 SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
                 ContentValues contentValues  = new ContentValues();
+                contentValues.put(DBConstant.SOURCE,source);
                 contentValues.put(DBConstant.TYPE,type);
                 contentValues.put(DBConstant.ACCOUNT,account);
                 contentValues.put(DBConstant.AMOUNT,amount);
-                contentValues.put(DBConstant.REMARK,remark);
                 contentValues.put(DBConstant.CRTTIME,simpleDateFormat.format(crttime));
                 if(account==null || "".equals(account)){
                     NeutralDialogFragment neutralDialogFragment = new NeutralDialogFragment();

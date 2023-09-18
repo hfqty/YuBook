@@ -19,18 +19,28 @@
             android:text="2019-4-15 21:20:21">
         </TextView>
     <TextView
+        android:id="@+id/text_source"
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="来源">
+    </TextView>
+    <TextView
         android:id="@+id/text_type"
         android:layout_marginLeft="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="支付宝">
+        android:text="去向">
     </TextView>
     <TextView
         android:id="@+id/text_account"
         android:layout_marginLeft="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="gmail">
+        android:text="">
+
 
     </TextView>
+
+
 </LinearLayout>

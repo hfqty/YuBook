@@ -38,8 +38,9 @@
             android:textSize="15sp"
 
             ></TextView>
+
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="155dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:text="@string/myname"
@@ -59,15 +60,15 @@
             android:text="@string/wechat"
             android:textSize="15sp"
             ></TextView>
+
         <TextView
             android:id="@+id/text_wechat_account"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:text="1059029968"
+            android:text="@string/wechat_no"
             android:textColor="#000000"
-            android:textSize="15sp"
-            ></TextView>
+            android:textSize="15sp"></TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -80,15 +81,15 @@
             android:text="@string/qq"
             android:textSize="15sp"
             ></TextView>
+
         <TextView
             android:id="@+id/text_qq_account"
-            android:layout_width="100dp"
+            android:layout_width="156dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:text="1059029968"
+            android:text="@string/qq_no"
             android:textColor="#000000"
-            android:textSize="15sp"
-            ></TextView>
+            android:textSize="15sp"></TextView>
     </LinearLayout>
     <TextView
         android:layout_gravity="center"

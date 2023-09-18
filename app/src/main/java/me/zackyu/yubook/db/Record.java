@@ -5,11 +5,12 @@ import java.util.Date;
 public class Record {
 
     private int id;
+    private String source;
     private String type;
     private String account;
     private Double amount;
     private Date crttime;
-    private String remark;
+
 
     public int getId() {
         return id;
@@ -19,12 +20,12 @@ public class Record {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getSource() {
+        return source;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setSource(String type) {
+        this.source = type;
     }
 
     public String getAccount() {
@@ -51,11 +52,23 @@ public class Record {
         this.crttime = crttime;
     }
 
-    public String getRemark() {
-        return remark;
+    public String getType() {
+        return type;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setType(String remark) {
+        this.type = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "id=" + id +
+                ", source='" + source + '\'' +
+                ", type='" + type + '\'' +
+                ", account='" + account + '\'' +
+                ", amount=" + amount +
+                ", crttime=" + crttime +
+                '}';
     }
 }

@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:text="@string/everywhere"
         android:textColor="#000000"
-        android:textSize="30dp">
+        android:textSize="36sp">
     </TextView>
     <Button
         android:id="@+id/button_new_record"
@@ -106,7 +106,7 @@
             ></TextView>
     </LinearLayout>
 
-    <TextView
+    <Button
         android:id="@+id/textview_about_me"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
@@ -114,7 +114,7 @@
         android:layout_gravity="center"
         android:text="@string/about_app"
         android:textColor="#000000"
-        android:textSize="13dp">
-    </TextView>
+        android:textSize="20dp">
+    </Button>
 
 </LinearLayout>

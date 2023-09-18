@@ -1,8 +1,11 @@
 package me.zackyu.yubook;
 
+import static android.content.ContentValues.TAG;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -49,14 +52,11 @@ public class RecordsActivity extends AppCompatActivity {
         button_records_income = findViewById(R.id.button_records_income);
         button_records_pay = findViewById(R.id.button_records_pay);
         text_title = findViewById(R.id.text_title);
-
-
         record_listview = findViewById(R.id.record_list);
         iDBHelper = new iDBHelper(RecordsActivity.this, DBConstant.NAME,null,1);
         getAllRecords();
         recordAdapter = new RecordAdapter(this,R.layout.record_item,records);
         record_listview.setAdapter(recordAdapter);
-
         button_records_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,10 +95,12 @@ public class RecordsActivity extends AppCompatActivity {
             do {
                 Record record = new Record();
                 int id = cursor.getInt(0);
-                String type = cursor.getString(1);
-                String account = cursor.getString(2);
-                double amount = cursor.getDouble(3);
-                String remark = cursor.getString(4);
+
+
+                String source = cursor.getString(1);
+                String type = cursor.getString(2);
+                String account = cursor.getString(3);
+                double amount = cursor.getDouble(4);
                 String date = cursor.getString(5);
                 Date crttime =new Date();
                 try {
@@ -107,13 +109,13 @@ public class RecordsActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
+                record.setSource(source);
                 record.setType(type);
                 record.setAccount(account);
                 record.setAmount(amount);
                 record.setId(id);
                 record.setCrttime(crttime);
-                record.setRemark(remark);
+                Log.d(TAG, record.toString());
                 records.add(record);
             }while (cursor.moveToNext());
         }
@@ -129,10 +131,10 @@ public class RecordsActivity extends AppCompatActivity {
             do {
                 Record record = new Record();
                 int id = cursor_income.getInt(0);
-                String type = cursor_income.getString(1);
-                String account = cursor_income.getString(2);
-                double amount = cursor_income.getDouble(3);
-                String remark = cursor_income.getString(4);
+                String source = cursor_income.getString(1);
+                String type = cursor_income.getString(2);
+                String account = cursor_income.getString(3);
+                double amount = cursor_income.getDouble(4);
                 String date = cursor_income.getString(5);
                 Date crttime =new Date();
                 try {
@@ -147,7 +149,7 @@ public class RecordsActivity extends AppCompatActivity {
                 record.setAmount(amount);
                 record.setId(id);
                 record.setCrttime(crttime);
-                record.setRemark(remark);
+                record.setSource(source);
                 records_income.add(record);
             }while (cursor_income.moveToNext());
         }
@@ -164,10 +166,10 @@ public class RecordsActivity extends AppCompatActivity {
             do {
                 Record record = new Record();
                 int id = cursor_pay.getInt(0);
-                String type = cursor_pay.getString(1);
-                String account = cursor_pay.getString(2);
-                double amount = cursor_pay.getDouble(3);
-                String remark = cursor_pay.getString(4);
+                String source = cursor_pay.getString(1);
+                String type = cursor_pay.getString(2);
+                String account = cursor_pay.getString(3);
+                double amount = cursor_pay.getDouble(4);
                 String date = cursor_pay.getString(5);
                 Date crttime =new Date();
                 try {
@@ -182,7 +184,7 @@ public class RecordsActivity extends AppCompatActivity {
                 record.setAmount(amount);
                 record.setId(id);
                 record.setCrttime(crttime);
-                record.setRemark(remark);
+                record.setSource(source);
                 records_pay.add(record);
             }while (cursor_pay.moveToNext());
         }

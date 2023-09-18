@@ -1,5 +1,7 @@
 package me.zackyu.yubook;
 
+
+
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,14 +29,16 @@ public class NewPayActivity extends AppCompatActivity {
 
     private Button button_new_pay_record;
     private Spinner new_pay_type;
+
+
+    private Spinner new_pay_source;
     private EditText new_pay_account;
     private EditText new_pay_amount;
-    private EditText new_pay_remark;
 
     private String type;
     private String account;
     private Double amount;
-    private String remark;
+    private String source;
     private String crttime;
 
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -49,15 +53,16 @@ public class NewPayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_pay_record);
 
         button_new_pay_record = findViewById(R.id.button_new_pay_record);
+        new_pay_source = findViewById(R.id.new_pay_sources);
         new_pay_type = findViewById(R.id.new_pay_type);
         new_pay_account = findViewById(R.id.new_pay_account);
         new_pay_amount = findViewById(R.id.new_pay_amount);
-        new_pay_remark = findViewById(R.id.new_pay_remark);
 
-        new_pay_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //2023年9月18日 11点53分
+        new_pay_source.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                type =  NewPayActivity.this.getResources().getStringArray(R.array.pay_type)[position];
+                type =  NewPayActivity.this.getResources().getStringArray(R.array.pay_from)[position];
             }
 
             @Override
@@ -65,7 +70,18 @@ public class NewPayActivity extends AppCompatActivity {
 
             }
         });
+        //2023年9月18日 11点54分
+        new_pay_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                source =  NewPayActivity.this.getResources().getStringArray(R.array.pay_for)[position];
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         button_new_pay_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,17 +97,17 @@ public class NewPayActivity extends AppCompatActivity {
                     amount = Double.parseDouble(str_big_amount);
 
                 }
-                remark = new_pay_remark.getText().toString();
+
 
                 crttime = simpleDateFormat.format(new_pay_crttime);
                 iDBHelper = new iDBHelper(NewPayActivity.this, DBConstant.NAME,null,1);
                 SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
                //准备数据
                 ContentValues contentValues  = new ContentValues();
+                contentValues.put(DBConstant.SOURCE, source);
                 contentValues.put(DBConstant.TYPE,type);
                 contentValues.put(DBConstant.ACCOUNT,account);
                 contentValues.put(DBConstant.AMOUNT,amount);
-                contentValues.put(DBConstant.REMARK,remark);
                 contentValues.put(DBConstant.CRTTIME,crttime);
                 if(account==null || "".equals(account)){
                     NeutralDialogFragment neutralDialogFragment = new NeutralDialogFragment();

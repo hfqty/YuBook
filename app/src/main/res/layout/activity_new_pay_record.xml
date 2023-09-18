@@ -31,13 +31,33 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:text="@string/paytype"
+            android:text="@string/paysource"
             android:textSize="20dp"
             android:textColor="#000000">
         </TextView>
 
         <Spinner
-            android:entries="@array/pay_type"
+            android:entries="@array/pay_from"
+            android:id="@+id/new_pay_sources"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="#000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/paytype"
+            android:textSize="20dp"
+            android:textColor="#000000">
+        </TextView>
+        <Spinner
+            android:entries="@array/pay_for"
             android:id="@+id/new_pay_type"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -54,7 +74,8 @@
             android:layout_height="77dp"
             android:text="@string/payaccount"
             android:textSize="20dp"
-            android:textColor="#000000">
+            android:textColor="#000000"
+            android:labelFor="@+id/new_pay_account">
         </TextView>
         <EditText
             android:id="@+id/new_pay_account"
@@ -73,7 +94,8 @@
             android:layout_height="50dp"
             android:text="@string/payamount"
             android:textSize="20dp"
-            android:textColor="#000000">
+            android:textColor="#000000"
+            android:labelFor="@+id/new_pay_amount">
         </TextView>
         <EditText
             android:id="@+id/new_pay_amount"
@@ -83,25 +105,7 @@
 
         </EditText>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="@string/payremark"
-            android:textSize="20dp"
-            android:textColor="#000000">
-        </TextView>
-        <EditText
-            android:id="@+id/new_pay_remark"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:inputType="text">
 
-        </EditText>
-    </LinearLayout>
 
 
 </LinearLayout>
