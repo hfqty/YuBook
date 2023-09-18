@@ -25,7 +25,7 @@ public class iDBHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
         this.icontext = context;
 
-     /*   String databasePath = context.getDatabasePath(NAME).getPath();
+/*        String databasePath = context.getDatabasePath(NAME).getPath();
 
         // 关闭数据库连接
         SQLiteDatabase database = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.OPEN_READWRITE);
