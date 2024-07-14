@@ -80,7 +80,8 @@
         <EditText
             android:id="@+id/new_pay_account"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:maxLines="1">
 
         </EditText>
     </LinearLayout>
@@ -94,6 +95,7 @@
             android:layout_height="50dp"
             android:text="@string/payamount"
             android:textSize="20dp"
+            android:maxLines="1"
             android:textColor="#000000"
             android:labelFor="@+id/new_pay_amount">
         </TextView>

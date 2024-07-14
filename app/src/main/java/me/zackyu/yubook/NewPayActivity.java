@@ -128,7 +128,7 @@ public class NewPayActivity extends AppCompatActivity {
                     }else{
                         sqLiteDatabase.insert(DBConstant.TNAME, null, contentValues);
                         NeutralDialogFragment neutralDialogFragment = new NeutralDialogFragment();
-                        neutralDialogFragment.show("结果", "添加成功", "确定", new DialogInterface.OnClickListener() {
+                        neutralDialogFragment.show("结果", "成功了", "确定", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent intent = new Intent(NewPayActivity.this,MainActivity.class);
