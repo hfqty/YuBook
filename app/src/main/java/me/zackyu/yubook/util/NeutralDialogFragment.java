@@ -20,23 +20,22 @@ public class NeutralDialogFragment extends DialogFragment {
 
     private String hint;
 
-
     public void show(String title, String message, String hint, DialogInterface.OnClickListener neutralCallback,
                      FragmentManager fragmentManager) {
         this.title = title;
         this.message = message;
         this.hint = hint;
         this.neutralCallback = neutralCallback;
-        show(fragmentManager, "NeutralDialogFragment");
+        super.show(fragmentManager, "NeutralDialogFragment");
     }
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setNeutralButton(hint, neutralCallback);
+        builder.setTitle(title)
+                .setMessage(message)
+                .setNeutralButton(hint, neutralCallback);
         return builder.create();
     }
 }

@@ -13,34 +13,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutMeActivity extends AppCompatActivity {
 
-    private TextView text_wechat_account;
-    private TextView text_qq_account;
+    private TextView textWechatAccount;
+    private TextView textQqAccount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
-        text_wechat_account = findViewById(R.id.text_wechat_account);
-        text_wechat_account.setOnClickListener(new View.OnClickListener() {
+
+        textWechatAccount = findViewById(R.id.text_wechat_account);
+        setUpCopyClickListener(textWechatAccount, "微信");
+
+        textQqAccount = findViewById(R.id.text_qq_account);
+        setUpCopyClickListener(textQqAccount, "QQ");
+    }
+
+    private void setUpCopyClickListener(TextView textView, String appName) {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                // 将文本内容放到系统剪贴板里。
-                cm.setText(text_wechat_account.getText());
-                Toast.makeText(AboutMeActivity.this, "复制成功，打开微信即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
-            }
-        });
-        text_qq_account = findViewById(R.id.text_qq_account);
-        text_qq_account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                // 将文本内容放到系统剪贴板里。
-                cm.setText(text_qq_account.getText());
-                Toast.makeText(AboutMeActivity.this, "复制成功，打开qq即可粘贴",Toast.LENGTH_LONG).show();//自定义的toast
+                cm.setText(textView.getText());
+                Toast.makeText(AboutMeActivity.this, "复制成功，打开" + appName + "即可粘贴", Toast.LENGTH_LONG).show();
             }
         });
     }
-
-
 }

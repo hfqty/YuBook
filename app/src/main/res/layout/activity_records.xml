@@ -1,77 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/records"
-        android:textColor="#000000"
-        android:textSize="30sp"></TextView>
-<RelativeLayout
-    android:layout_width="200dp"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_gravity="center"
-    >
-    <Button
-        android:background="@drawable/btn_circle_03"
-        android:id="@+id/button_records_income"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_toRightOf="@id/button_records_pay"
-        style="@style/Widget.AppCompat.Button"
-        android:text="@string/income"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp">
-    </Button>
-    <Button
-        android:background="@drawable/btn_circle_02"
-        android:id="@+id/button_records_pay"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        style="@style/Widget.AppCompat.Button"
-        android:text="@string/pay"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp">
-    </Button>
 
-</RelativeLayout>
-    <Button
-        android:background="@drawable/btn_circle_01"
-        android:id="@+id/button_records_all"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        style="@style/Widget.AppCompat.Button"
-        android:text="@string/all"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp">
-    </Button>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/text_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/all"
-        android:textSize="25sp"
-        android:textStyle="bold">
-
-    </TextView>
-    <ListView
-        android:id="@+id/record_list"
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </ListView>
-</LinearLayout>
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="120dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/thisisallrecords"
+            android:textColor="#000000"
+            android:textSize="52sp"
+            android:gravity="center" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:background="@drawable/button_gradient_background"
+                android:id="@+id/button_records_income"
+                android:layout_width="77dp"
+                android:layout_height="50dp"
+                style="@style/Widget.AppCompat.Button"
+                android:text="@string/income"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <Button
+                android:background="@drawable/button_gradient_background"
+                android:id="@+id/button_records_pay"
+                android:layout_width="77dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/button_records_income"
+                style="@style/Widget.AppCompat.Button"
+                android:text="@string/pay"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <Button
+                android:background="@drawable/button_gradient_background"
+                android:id="@+id/button_records_all"
+                android:layout_width="77dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/button_records_pay"
+                style="@style/Widget.AppCompat.Button"
+                android:text="@string/all"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/all"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center" />
+
+            <ListView
+                android:id="@+id/record_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>

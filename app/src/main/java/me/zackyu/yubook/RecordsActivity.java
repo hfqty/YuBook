@@ -26,167 +26,178 @@ import me.zackyu.yubook.db.iDBHelper;
 
 public class RecordsActivity extends AppCompatActivity {
 
-    private TextView text_title ;
-    private ListView record_listview;
+    private TextView textTitle;
+    private ListView recordListView;
 
     private RecordAdapter recordAdapter;
     private iDBHelper iDBHelper;
-    private List<Record> records ;
-    private List<Record> records_income ;
-    private List<Record> records_pay ;
+    private List<Record> records;
+    private List<Record> recordsIncome;
+    private List<Record> recordsPay;
 
-    private Button button_records_all;
-    private Button button_records_income;
-    private Button button_records_pay;
+    private Button buttonRecordsAll;
+    private Button buttonRecordsIncome;
+    private Button buttonRecordsPay;
 
-
-
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
         setTitle("记录");
-        button_records_all = findViewById(R.id.button_records_all);
-        button_records_income = findViewById(R.id.button_records_income);
-        button_records_pay = findViewById(R.id.button_records_pay);
-        text_title = findViewById(R.id.text_title);
-        record_listview = findViewById(R.id.record_list);
-        iDBHelper = new iDBHelper(RecordsActivity.this, DBConstant.NAME,null,1);
-        getAllRecords();
-        recordAdapter = new RecordAdapter(this,R.layout.record_item,records);
-        record_listview.setAdapter(recordAdapter);
-        button_records_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                text_title.setText("所有");
-                getAllRecords();
-                recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records);
-                record_listview.setAdapter(recordAdapter);
-            }
-        });
-        button_records_income.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                text_title.setText("收入");
-                getIncomeRecords();
-                recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records_income);
-                record_listview.setAdapter(recordAdapter);
-            }
-        });
-        button_records_pay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                text_title.setText("支出");
-                getPayRecords();
-                recordAdapter = new RecordAdapter(RecordsActivity.this,R.layout.record_item,records_pay);
-                record_listview.setAdapter(recordAdapter);
-            }
-        });
 
+        initViews();
+        initDBHelper();
+        initData();
+        setListeners();
     }
 
-    public void getAllRecords(){
+    private void initViews() {
+        buttonRecordsAll = findViewById(R.id.button_records_all);
+        buttonRecordsIncome = findViewById(R.id.button_records_income);
+        buttonRecordsPay = findViewById(R.id.button_records_pay);
+        textTitle = findViewById(R.id.text_title);
+        recordListView = findViewById(R.id.record_list);
+    }
+
+    private void initDBHelper() {
+        iDBHelper = new iDBHelper(RecordsActivity.this, DBConstant.NAME, null, 1);
+    }
+
+    private void initData() {
         records = new ArrayList<>();
+        recordsIncome = new ArrayList<>();
+        recordsPay = new ArrayList<>();
+        getAllRecords();
+        recordAdapter = new RecordAdapter(this, R.layout.record_item, records);
+        recordListView.setAdapter(recordAdapter);
+    }
+
+    private void setListeners() {
+        buttonRecordsAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textTitle.setText("所有");
+                getAllRecords();
+                recordAdapter = new RecordAdapter(RecordsActivity.this, R.layout.record_item, records);
+                recordListView.setAdapter(recordAdapter);
+            }
+        });
+
+        buttonRecordsIncome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textTitle.setText("收入");
+                getIncomeRecords();
+                recordAdapter = new RecordAdapter(RecordsActivity.this, R.layout.record_item, recordsIncome);
+                recordListView.setAdapter(recordAdapter);
+            }
+        });
+
+        buttonRecordsPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textTitle.setText("支出");
+                getPayRecords();
+                recordAdapter = new RecordAdapter(RecordsActivity.this, R.layout.record_item, recordsPay);
+                recordListView.setAdapter(recordAdapter);
+            }
+        });
+    }
+
+    public void getAllRecords() {
+        records.clear();
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.query("MyAccount",null,null,null,null,null,null);
-        if(cursor.moveToFirst()){
-            do {
+        Cursor cursor = sqLiteDatabase.query("MyAccount", null, null, null, null, null, null);
+        if (cursor.moveToFirst()) {
+            while (!cursor.isAfterLast()) {
                 Record record = new Record();
                 int id = cursor.getInt(0);
-
-
                 String source = cursor.getString(1);
                 String type = cursor.getString(2);
                 String account = cursor.getString(3);
                 double amount = cursor.getDouble(4);
                 String date = cursor.getString(5);
-                Date crttime =new Date();
                 try {
-                    crttime = simpleDateFormat.parse(date);
-
+                    Date crtTime = simpleDateFormat.parse(date);
+                    record.setSource(source);
+                    record.setType(type);
+                    record.setAccount(account);
+                    record.setAmount(amount);
+                    record.setId(id);
+                    record.setCrttime(crtTime);
+                    records.add(record);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                record.setSource(source);
-                record.setType(type);
-                record.setAccount(account);
-                record.setAmount(amount);
-                record.setId(id);
-                record.setCrttime(crttime);
-                Log.d(TAG, record.toString());
-                records.add(record);
-            }while (cursor.moveToNext());
+                cursor.moveToNext();
+            }
         }
-
+        cursor.close();
     }
 
-    public void getIncomeRecords(){
-        records_income = new ArrayList<>();
-        String sql_income = "select  * from MyAccount where amount >0;";
+    public void getIncomeRecords() {
+        recordsIncome.clear();
+        String sqlIncome = "select  * from MyAccount where amount > 0";
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        Cursor cursor_income = sqLiteDatabase.rawQuery(sql_income,null);
-        if(cursor_income.moveToFirst()){
-            do {
+        Cursor cursorIncome = sqLiteDatabase.rawQuery(sqlIncome, null);
+        if (cursorIncome.moveToFirst()) {
+            while (!cursorIncome.isAfterLast()) {
                 Record record = new Record();
-                int id = cursor_income.getInt(0);
-                String source = cursor_income.getString(1);
-                String type = cursor_income.getString(2);
-                String account = cursor_income.getString(3);
-                double amount = cursor_income.getDouble(4);
-                String date = cursor_income.getString(5);
-                Date crttime =new Date();
+                int id = cursorIncome.getInt(0);
+                String source = cursorIncome.getString(1);
+                String type = cursorIncome.getString(2);
+                String account = cursorIncome.getString(3);
+                double amount = cursorIncome.getDouble(4);
+                String date = cursorIncome.getString(5);
                 try {
-                    crttime = simpleDateFormat.parse(date);
-
+                    Date crtTime = simpleDateFormat.parse(date);
+                    record.setSource(source);
+                    record.setType(type);
+                    record.setAccount(account);
+                    record.setAmount(amount);
+                    record.setId(id);
+                    record.setCrttime(crtTime);
+                    recordsIncome.add(record);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
-                record.setType(type);
-                record.setAccount(account);
-                record.setAmount(amount);
-                record.setId(id);
-                record.setCrttime(crttime);
-                record.setSource(source);
-                records_income.add(record);
-            }while (cursor_income.moveToNext());
+                cursorIncome.moveToNext();
+            }
         }
-
+        cursorIncome.close();
     }
 
-    public void getPayRecords(){
-        records_pay = new ArrayList<>();
+    public void getPayRecords() {
+        recordsPay.clear();
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        String sql_pay = "select * from MyAccount where amount < 0;";
-
-        Cursor cursor_pay = sqLiteDatabase.rawQuery(sql_pay,null);
-        if(cursor_pay.moveToFirst()){
-            do {
+        String sqlPay = "select * from MyAccount where amount < 0";
+        Cursor cursorPay = sqLiteDatabase.rawQuery(sqlPay, null);
+        if (cursorPay.moveToFirst()) {
+            while (!cursorPay.isAfterLast()) {
                 Record record = new Record();
-                int id = cursor_pay.getInt(0);
-                String source = cursor_pay.getString(1);
-                String type = cursor_pay.getString(2);
-                String account = cursor_pay.getString(3);
-                double amount = cursor_pay.getDouble(4);
-                String date = cursor_pay.getString(5);
-                Date crttime =new Date();
+                int id = cursorPay.getInt(0);
+                String source = cursorPay.getString(1);
+                String type = cursorPay.getString(2);
+                String account = cursorPay.getString(3);
+                double amount = cursorPay.getDouble(4);
+                String date = cursorPay.getString(5);
                 try {
-                    crttime = simpleDateFormat.parse(date);
-
+                    Date crtTime = simpleDateFormat.parse(date);
+                    record.setSource(source);
+                    record.setType(type);
+                    record.setAccount(account);
+                    record.setAmount(amount);
+                    record.setId(id);
+                    record.setCrttime(crtTime);
+                    recordsPay.add(record);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
-                record.setType(type);
-                record.setAccount(account);
-                record.setAmount(amount);
-                record.setId(id);
-                record.setCrttime(crttime);
-                record.setSource(source);
-                records_pay.add(record);
-            }while (cursor_pay.moveToNext());
+                cursorPay.moveToNext();
+            }
         }
+        cursorPay.close();
     }
 }

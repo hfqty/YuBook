@@ -1,113 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#FAF9F6">  <!-- 背景改为米白色 -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:text="@string/pay"
-        android:textColor="#000000"
-        android:textSize="30dp">
-    </TextView>
-    <Button
-        android:background="@drawable/btn_circle_01"
-        android:id="@+id/button_new_pay_record"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="@string/records"
-        android:textSize="20dp"
-        android:textColor="#ffffff"
-        android:layout_gravity="center_horizontal">
-    </Button>
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:layout_marginTop="77dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pay"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/paysource"
-            android:textSize="20dp"
-            android:textColor="#000000">
-        </TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center" />
 
         <Spinner
-            android:entries="@array/pay_from"
             android:id="@+id/new_pay_sources"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textColor="#000000"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:orientation="horizontal">
+            android:layout_height="77dp"
+            android:entries="@array/pay_from"
+            android:textColor="#000000"
+            android:textAlignment="center" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/paytype"
-            android:textSize="20dp"
-            android:textColor="#000000">
-        </TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center" />
+
         <Spinner
-            android:entries="@array/pay_for"
             android:id="@+id/new_pay_type"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textColor="#000000"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:orientation="horizontal">
+            android:layout_height="77dp"
+            android:entries="@array/pay_for"
+            android:textColor="#000000"
+            android:textAlignment="center" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_height="wrap_content"
             android:text="@string/payaccount"
-            android:textSize="20dp"
             android:textColor="#000000"
-            android:labelFor="@+id/new_pay_account">
-        </TextView>
+            android:textSize="20sp"
+            android:gravity="center" />
+
         <EditText
             android:id="@+id/new_pay_account"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:maxLines="1">
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="77sp"
+            android:gravity="center" />
 
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/payamount"
-            android:textSize="20dp"
-            android:maxLines="1"
             android:textColor="#000000"
-            android:labelFor="@+id/new_pay_amount">
-        </TextView>
+            android:textSize="20sp"
+            android:gravity="center" />
+
         <EditText
             android:id="@+id/new_pay_amount"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal">
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="77sp"
+            android:maxLength="9"
+            android:gravity="center"
+            android:singleLine="true" />  <!-- 输入内容不可换行 -->
 
-        </EditText>
+        <Button
+            android:background="@drawable/button_gradient_background"
+            android:id="@+id/button_new_pay_record"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:text="@string/btn_records"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:gravity="center" />
+
+        <Button
+            android:background="@drawable/button_gradient_background"
+            android:id="@+id/button_new_pay_back"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="7dp"
+            android:text="@string/back"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:gravity="center" />
     </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>

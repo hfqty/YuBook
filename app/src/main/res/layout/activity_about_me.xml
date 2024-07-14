@@ -12,8 +12,7 @@
         android:layout_gravity="center"
         android:text="@string/about"
         android:textColor="#000000"
-        android:textSize="50sp">
-    </TextView>
+        android:textSize="50sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,22 +21,19 @@
         android:layout_gravity="center"
         android:text="@string/about_me"
         android:textColor="#000000"
-        android:textSize="33sp">
+        android:textSize="33sp" />
 
-    </TextView>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:orientation="horizontal"
         android:layout_gravity="center"
-       >
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="@string/author"
-            android:textSize="15sp"
-
-            ></TextView>
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="155dp"
@@ -45,21 +41,20 @@
             android:layout_marginLeft="30dp"
             android:text="@string/myname"
             android:textColor="#000000"
-            android:textSize="15sp"
-
-            ></TextView>
+            android:textSize="15sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="@string/wechat"
-            android:textSize="15sp"
-            ></TextView>
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/text_wechat_account"
@@ -68,19 +63,20 @@
             android:layout_marginLeft="30dp"
             android:text="@string/wechat_no"
             android:textColor="#000000"
-            android:textSize="15sp"></TextView>
+            android:textSize="15sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:text="@string/qq"
-            android:textSize="15sp"
-            ></TextView>
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/text_qq_account"
@@ -89,14 +85,16 @@
             android:layout_marginLeft="30dp"
             android:text="@string/qq_no"
             android:textColor="#000000"
-            android:textSize="15sp"></TextView>
+            android:textSize="15sp" />
     </LinearLayout>
+
     <TextView
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clickcopy"
-        android:textSize="10sp"></TextView>
+        android:textSize="10sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -104,16 +102,14 @@
         android:layout_gravity="center"
         android:text="@string/about_app"
         android:textColor="#000000"
-        android:textSize="33sp">
-    </TextView>
+        android:textSize="33sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/intro_app"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:text="@string/intro_app" />
 
-    </TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -121,14 +117,11 @@
         android:layout_gravity="center"
         android:text="@string/version_string"
         android:textColor="#000000"
-        android:textSize="33sp">
-    </TextView>
+        android:textSize="33sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/version"
-        android:layout_gravity="center">
-
-    </TextView>
+        android:layout_gravity="center"
+        android:text="@string/version" />
 </LinearLayout>

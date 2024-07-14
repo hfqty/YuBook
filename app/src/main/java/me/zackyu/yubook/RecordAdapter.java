@@ -18,30 +18,34 @@ import me.zackyu.yubook.db.Record;
 public class RecordAdapter extends ArrayAdapter<Record> {
 
     private int resourceId;
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public RecordAdapter(@NonNull Context context, int resource, List objs) {
-        super(context, resource,objs);
-        this.resourceId =resource;
+    public RecordAdapter(@NonNull Context context, int resource, @NonNull List<Record> objs) {
+        super(context, resource, objs);
+        this.resourceId = resource;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Record record  =getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
-        TextView text_amount =view.findViewById(R.id.text_amount);
-        TextView text_type =view.findViewById(R.id.text_type);
-        TextView text_account = view.findViewById(R.id.text_account);
-        TextView text_time = view.findViewById(R.id.text_time);
-        TextView text_source = view.findViewById(R.id.text_source);
-        text_amount.setText("￥ "+record.getAmount()+"");
-        //2023年9月18日 10点46分 添加新功能
-        text_source.setText("金钱来源:"+record.getSource());
-        text_type.setText("金钱去向:"+record.getType());
-        text_account.setText("账号:"+record.getAccount());
-        text_time.setText("时间:"+simpleDateFormat.format(record.getCrttime()));
+        Record record = getItem(position);
 
-        return view;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+        }
+
+        TextView textAmount = convertView.findViewById(R.id.text_amount);
+        TextView textType = convertView.findViewById(R.id.text_type);
+        TextView textAccount = convertView.findViewById(R.id.text_account);
+        TextView textTime = convertView.findViewById(R.id.text_time);
+        TextView textSource = convertView.findViewById(R.id.text_source);
+
+        textAmount.setText("￥ " + record.getAmount());
+        textSource.setText("来源: " + record.getSource());
+        textType.setText("去向: " + record.getType());
+        textAccount.setText("账号: " + record.getAccount());
+        textTime.setText("时间: " + simpleDateFormat.format(record.getCrttime()));
+
+        return convertView;
     }
 }

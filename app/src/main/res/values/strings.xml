@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">微账单</string>
-    <string name="new_record">记账</string>
-    <string name="records">记录</string>
+    <string name="new_record">请在这里记账</string>
+    <string name="records">请在这看记录</string>
     <string name="action_about">关于</string>
     <string name="income">收入</string>
     <string name="pay">支出</string>
@@ -35,4 +35,8 @@
     <string name="payaccount">支出账号</string>
     <string name="payamount">支出金额</string>
     <string name="paytype">支出去向</string>
+    <string name="shortcut">速记</string>
+    <string name="back">返回</string>
+    <string name="thisisallrecords">这是一切记录</string>
+    <string name="btn_records">开心记一笔账吧</string>
 </resources>
