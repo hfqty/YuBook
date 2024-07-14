@@ -17,18 +17,18 @@
     <Button
         android:id="@+id/button_new_record"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:text="@string/new_record"
         android:textSize="20dp"
         android:textColor="#ffffff"
-        android:background="@drawable/btn_circle"
+        android:background="@drawable/btn_bg_normal"
         style="@style/Widget.AppCompat.Button"></Button>
 
     <Button
         android:id="@+id/button_records"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="@string/records"
@@ -109,12 +109,13 @@
     <Button
         android:id="@+id/textview_about_me"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="40dp"
         android:layout_marginTop="120dp"
         android:layout_gravity="center"
         android:text="@string/about_app"
         android:textColor="#000000"
-        android:textSize="20dp">
+        android:textSize="20dp"
+        android:background="#ffffff">
     </Button>
 
 </LinearLayout>

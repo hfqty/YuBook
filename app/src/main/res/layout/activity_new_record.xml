@@ -18,9 +18,9 @@
         android:background="@drawable/btn_circle"
         android:id="@+id/button_income"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="200dp"
         android:text="@string/income"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textColor="#ffffff"
         android:layout_gravity="center_horizontal"
 
@@ -32,10 +32,10 @@
         android:background="@drawable/btn_circle_01"
         android:id="@+id/button_pay"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="200dp"
         android:layout_marginTop="30dp"
         android:text="@string/pay"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textColor="#ffffff"
         android:layout_gravity="center_horizontal">
 

@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:text="@string/about"
         android:textColor="#000000"
-        android:textSize="30sp">
+        android:textSize="50sp">
     </TextView>
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_gravity="center"
         android:text="@string/about_me"
         android:textColor="#000000"
-        android:textSize="19sp">
+        android:textSize="33sp">
 
     </TextView>
     <LinearLayout
@@ -104,7 +104,7 @@
         android:layout_gravity="center"
         android:text="@string/about_app"
         android:textColor="#000000"
-        android:textSize="19sp">
+        android:textSize="33sp">
     </TextView>
 
     <TextView
@@ -121,7 +121,7 @@
         android:layout_gravity="center"
         android:text="@string/version_string"
         android:textColor="#000000"
-        android:textSize="19sp">
+        android:textSize="33sp">
     </TextView>
 
     <TextView

@@ -8,7 +8,7 @@
     <string name="all">所有</string>
     <string name="plus">+</string>
     <string name="subtract">-</string>
-    <string name="everywhere">随时记录</string>
+    <string name="everywhere">随时记录财产</string>
     <string name="type">类型</string>
     <string name="account">账号</string>
     <string name="amount">金额</string>
@@ -26,7 +26,7 @@
     <string name="about_app">关于应用</string>
     <string name="intro_app">一个简洁优雅的记账应用</string>
     <string name="version_string">应用版本</string>
-    <string name="version">1.2</string>
+    <string name="version">1.3</string>
     <string name="incomesource">收入去向</string>
     <string name="incomeaccount">收入账号</string>
     <string name="incomeamount">收入金额</string>
