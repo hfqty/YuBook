@@ -26,7 +26,7 @@
     <string name="about_app">关于应用</string>
     <string name="intro_app">一个简洁优雅的记账应用</string>
     <string name="version_string">应用版本</string>
-    <string name="version">1.3</string>
+    <string name="version">2.1</string>
     <string name="incomesource">收入去向</string>
     <string name="incomeaccount">收入账号</string>
     <string name="incomeamount">收入金额</string>
@@ -42,4 +42,7 @@
     <string name="settings">设置</string>
     <string name="share" >分享</string>
     <string name="sound_record">语音记账</string>
+    <string name="new_account">管理账户</string>
+    <string name="new_incomesource" >管理收入来源</string>
+    <string name="new_paytype" >管理支出去向</string>
 </resources>

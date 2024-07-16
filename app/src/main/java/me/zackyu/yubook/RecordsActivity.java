@@ -72,6 +72,9 @@ public class RecordsActivity extends AppCompatActivity {
         getAllRecords();
         recordAdapter = new RecordAdapter(this, R.layout.record_item, records);
         recordListView.setAdapter(recordAdapter);
+
+
+
     }
 
     private void setListeners() {

@@ -12,20 +12,21 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import java.io.File;
-import java.util.jar.Attributes;
-
 public class iDBHelper extends SQLiteOpenHelper {
+
     private Context icontext;
+
     public static final String CREATE_ACCOUNT_DB =
-            "create table MyAccount (" + "id integer primary key autoincrement, " + " type text, "+ " source text,"+" account text," + " amount real , "  +" crttime NUMERIC)";
+            "create table MyAccount (" + "id integer primary key autoincrement, " + " type text, "+ " source text,"+" account text," + " amount real, "  +" crttime NUMERIC)";
 
+    public static final String CREATE_ACCOUNT_INFO_TABLE =
+            "create table AccountInfo (" + "id integer primary key autoincrement, " + "zhanghao text)";
 
-    public iDBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory,int version) {
+    public iDBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
         this.icontext = context;
 
-/*        String databasePath = context.getDatabasePath(NAME).getPath();
+    /*    String databasePath = context.getDatabasePath(NAME).getPath();
 
         // 关闭数据库连接
         SQLiteDatabase database = SQLiteDatabase.openDatabase(databasePath, null, SQLiteDatabase.OPEN_READWRITE);
@@ -48,7 +49,8 @@ public class iDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_ACCOUNT_DB);
-        Toast.makeText(icontext,"创建成功",Toast.LENGTH_LONG);
+        db.execSQL(CREATE_ACCOUNT_INFO_TABLE);
+        Toast.makeText(icontext, "创建成功", Toast.LENGTH_LONG).show();
     }
 
     @Override

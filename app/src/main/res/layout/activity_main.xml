@@ -99,10 +99,50 @@
                 android:textSize="77sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button_new_account"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center"
+            android:text="@string/new_account"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_gradient_background"
+            style="@style/Widget.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/button_new_incometype"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center"
+            android:text="@string/new_incomesource"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_gradient_background"
+            style="@style/Widget.AppCompat.Button" />
+
+        <Button
+            android:id="@+id/button_new_paytype"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center"
+            android:text="@string/new_paytype"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_gradient_background"
+            style="@style/Widget.AppCompat.Button" />
+
+
         <Button
             android:id="@+id/button_home_settings"
             android:layout_width="match_parent"
             android:layout_height="77dp"
+            android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/settings"
             android:textSize="20dp"
@@ -115,7 +155,7 @@
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:layout_gravity="center"
-            android:layout_marginTop="77dp"
+            android:layout_marginTop="7dp"
             android:text="@string/share"
             android:textSize="20dp"
             android:textColor="#ffffff"
@@ -125,7 +165,7 @@
             android:id="@+id/textview_about_me"
             android:layout_width="match_parent"
             android:layout_height="77dp"
-            android:layout_marginTop="77dp"
+            android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/about_app"
             android:textColor="#ffffff"
