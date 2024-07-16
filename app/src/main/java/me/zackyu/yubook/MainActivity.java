@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showData() {
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        String sqlIncome = "select sum(amount) from MyAccount where amount > 0";
-        String sqlPay = "select sum(amount) from MyAccount where amount < 0";
+        String sqlIncome = "select sum(amount) from record where amount > 0";
+        String sqlPay = "select sum(amount) from record where amount < 0";
 
         Cursor cursorIncome = sqLiteDatabase.rawQuery(sqlIncome, null);
         Cursor cursorPay = sqLiteDatabase.rawQuery(sqlPay, null);

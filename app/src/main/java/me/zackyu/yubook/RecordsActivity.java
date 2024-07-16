@@ -112,7 +112,7 @@ public class RecordsActivity extends AppCompatActivity {
     public void getAllRecords() {
         records.clear();
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.query("MyAccount", null, null, null, null, null, null);
+        Cursor cursor = sqLiteDatabase.query(DBConstant.TNAME, null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast()) {
                 Record record = new Record();
@@ -142,7 +142,7 @@ public class RecordsActivity extends AppCompatActivity {
 
     public void getIncomeRecords() {
         recordsIncome.clear();
-        String sqlIncome = "select  * from MyAccount where amount > 0";
+        String sqlIncome = "select  * from record where amount > 0";
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
         Cursor cursorIncome = sqLiteDatabase.rawQuery(sqlIncome, null);
         if (cursorIncome.moveToFirst()) {
@@ -175,7 +175,7 @@ public class RecordsActivity extends AppCompatActivity {
     public void getPayRecords() {
         recordsPay.clear();
         SQLiteDatabase sqLiteDatabase = iDBHelper.getWritableDatabase();
-        String sqlPay = "select * from MyAccount where amount < 0";
+        String sqlPay = "select * from record where amount < 0";
         Cursor cursorPay = sqLiteDatabase.rawQuery(sqlPay, null);
         if (cursorPay.moveToFirst()) {
             while (!cursorPay.isAfterLast()) {
