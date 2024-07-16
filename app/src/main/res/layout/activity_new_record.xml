@@ -13,8 +13,8 @@
         android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="222dp"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:text="@string/new_record"
@@ -28,22 +28,20 @@
         <Button
             android:background="@drawable/button_gradient_background"
             android:id="@+id/button_income"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:text="@string/income"
             android:textSize="30sp"
             android:textColor="#ffffff"
-            android:layout_gravity="center_horizontal"
-
-            >
+            android:layout_gravity="center_horizontal">
 
         </Button>
 
         <Button
             android:background="@drawable/button_gradient_background"
             android:id="@+id/button_pay"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_marginTop="30dp"
             android:text="@string/pay"
             android:textSize="30sp"
@@ -55,10 +53,23 @@
         <Button
             android:background="@drawable/button_gradient_background"
             android:id="@+id/button_shortcut"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_marginTop="30dp"
             android:text="@string/shortcut"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal">
+
+        </Button>
+
+        <Button
+            android:background="@drawable/button_gradient_background"
+            android:id="@+id/button_sound_record"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/sound_record"
             android:textSize="30sp"
             android:textColor="#ffffff"
             android:layout_gravity="center_horizontal">

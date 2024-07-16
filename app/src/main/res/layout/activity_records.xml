@@ -23,7 +23,7 @@
             <Button
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_income"
-                android:layout_width="77dp"
+                android:layout_width="115dp"
                 android:layout_height="50dp"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/income"
@@ -34,7 +34,7 @@
             <Button
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_pay"
-                android:layout_width="77dp"
+                android:layout_width="115dp"
                 android:layout_height="50dp"
                 android:layout_toRightOf="@id/button_records_income"
                 style="@style/Widget.AppCompat.Button"
@@ -46,7 +46,7 @@
             <Button
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_all"
-                android:layout_width="77dp"
+                android:layout_width="115dp"
                 android:layout_height="50dp"
                 android:layout_toRightOf="@id/button_records_pay"
                 style="@style/Widget.AppCompat.Button"

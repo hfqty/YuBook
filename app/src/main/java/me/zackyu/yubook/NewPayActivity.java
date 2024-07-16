@@ -1,6 +1,7 @@
 package me.zackyu.yubook;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -122,6 +123,9 @@ public class NewPayActivity extends AppCompatActivity {
                     sqLiteDatabase.insert(DBConstant.TNAME, null, contentValues);
                     Intent intent = new Intent(NewPayActivity.this, MainActivity.class);
                     startActivity(intent);
+                    Context context = getApplicationContext();
+                    Toast toast = Toast.makeText(context, "记录成功，返回主页", Toast.LENGTH_LONG);
+                    toast.show();
                     finish();
                 }
             }

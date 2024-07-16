@@ -8,17 +8,16 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pay"
             android:textColor="#000000"
-            android:textSize="30sp"
+            android:textSize="59sp"
             android:gravity="center" />
 
         <TextView
@@ -26,23 +25,27 @@
             android:layout_height="wrap_content"
             android:text="@string/paysource"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="77sp"
             android:gravity="center" />
 
         <Spinner
             android:id="@+id/new_pay_sources"
             android:layout_width="match_parent"
+            android:theme="@style/CustomSpinnerStyle"
             android:layout_height="77dp"
             android:entries="@array/pay_from"
             android:textColor="#000000"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/paytype"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="77sp"
             android:gravity="center" />
 
         <Spinner
@@ -50,15 +53,18 @@
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:entries="@array/pay_for"
+            android:theme="@style/CustomSpinnerStyle"
             android:textColor="#000000"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/payaccount"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="77sp"
             android:gravity="center" />
 
         <EditText
@@ -76,7 +82,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payamount"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="77sp"
             android:gravity="center" />
 
         <EditText

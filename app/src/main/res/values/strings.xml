@@ -39,4 +39,7 @@
     <string name="back">返回</string>
     <string name="thisisallrecords">这是一切记录</string>
     <string name="btn_records">开心记一笔账吧</string>
+    <string name="settings">设置</string>
+    <string name="share" >分享</string>
+    <string name="sound_record">语音记账</string>
 </resources>
