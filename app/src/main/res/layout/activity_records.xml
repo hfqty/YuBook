@@ -8,8 +8,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_gravity="center"
-            android:layout_height="120dp"
-            android:layout_marginTop="2dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="25dp"
             android:text="@string/thisisallrecords"
             android:textColor="#000000"
             android:textSize="52sp"
@@ -24,35 +24,35 @@
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_income"
                 android:layout_width="115dp"
-                android:layout_height="50dp"
+                android:layout_height="52dp"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/income"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:gravity="center" />
 
             <Button
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_pay"
                 android:layout_width="115dp"
-                android:layout_height="50dp"
+                android:layout_height="52dp"
                 android:layout_toRightOf="@id/button_records_income"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/pay"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:gravity="center" />
 
             <Button
                 android:background="@drawable/button_gradient_background"
                 android:id="@+id/button_records_all"
                 android:layout_width="115dp"
-                android:layout_height="50dp"
+                android:layout_height="52dp"
                 android:layout_toRightOf="@id/button_records_pay"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/all"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:gravity="center" />
         </RelativeLayout>
 
@@ -64,12 +64,13 @@
             <TextView
                 android:id="@+id/text_title"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="34dp"
                 android:text="@string/all"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:gravity="center" />
+                android:gravity="center"
+                />
 
             <ListView
                 android:id="@+id/record_list"

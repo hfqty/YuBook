@@ -10,23 +10,23 @@
         android:background="#FAF9F6">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="257dp"
-            android:layout_marginTop="77dp"
+            android:layout_marginTop="34dp"
             android:layout_gravity="center"
             android:text="@string/everywhere"
             android:textColor="#000000"
-            android:textSize="77sp"
+            android:textSize="52sp"
             android:textStyle="bold"
             android:gravity="center"/>
 
         <Button
             android:id="@+id/button_new_record"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="52dp"
             android:layout_gravity="center"
             android:text="@string/new_record"
-            android:textSize="20dp"
+            android:textSize="25sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -34,11 +34,11 @@
         <Button
             android:id="@+id/button_records"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="52dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="7dp"
             android:text="@string/records"
-            android:textSize="20dp"
+            android:textSize="25sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -52,15 +52,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/income"
                 android:textSize="77sp" />
 
             <TextView
                 android:id="@+id/text_income"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="0.00"
                 android:textColor="#000000"
@@ -68,31 +72,39 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/pay"
                 android:textSize="77sp" />
 
             <TextView
                 android:id="@+id/text_pay"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="0.00"
                 android:textColor="#000000"
                 android:textSize="77sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="结余"
                 android:textSize="77sp" />
 
             <TextView
                 android:id="@+id/text_total"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="0.00"
                 android:textColor="#000000"
@@ -104,11 +116,11 @@
         <Button
             android:id="@+id/button_new_account"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/new_account"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -116,11 +128,11 @@
         <Button
             android:id="@+id/button_new_incometype"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/new_incomesource"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -128,11 +140,11 @@
         <Button
             android:id="@+id/button_new_paytype"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/new_paytype"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -141,11 +153,11 @@
         <Button
             android:id="@+id/button_home_settings"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/settings"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
@@ -153,23 +165,23 @@
         <Button
             android:id="@+id/button_share"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_gravity="center"
             android:layout_marginTop="7dp"
             android:text="@string/share"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
         <Button
             android:id="@+id/textview_about_me"
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="43dp"
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/about_app"
             android:textColor="#ffffff"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:background="@drawable/button_gradient_background" />
     </LinearLayout>
 </ScrollView>

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="@string/paysource"
             android:textColor="#000000"
-            android:textSize="77sp"
+            android:textSize="25sp"
             android:gravity="center" />
 
         <Spinner
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="@string/paytype"
             android:textColor="#000000"
-            android:textSize="77sp"
+            android:textSize="25sp"
             android:gravity="center" />
 
         <Spinner
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payaccount"
             android:textColor="#000000"
-            android:textSize="77sp"
+            android:textSize="25sp"
             android:gravity="center" />
 
         <EditText
@@ -75,14 +75,16 @@
             android:inputType="text"
             android:singleLine="true"
             android:textSize="77sp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:hint="请输入内容"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/payamount"
             android:textColor="#000000"
-            android:textSize="77sp"
+            android:textSize="25sp"
             android:gravity="center" />
 
         <EditText
@@ -93,7 +95,9 @@
             android:textSize="77sp"
             android:maxLength="9"
             android:gravity="center"
-            android:singleLine="true" />  <!-- 输入内容不可换行 -->
+            android:singleLine="true"
+            android:hint="请输入内容"
+            />  <!-- 输入内容不可换行 -->
 
         <Button
             android:background="@drawable/button_gradient_background"
