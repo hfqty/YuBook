@@ -27,7 +27,7 @@
                 android:layout_height="52dp"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/income"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 android:gravity="center" />
 
@@ -39,7 +39,7 @@
                 android:layout_toRightOf="@id/button_records_income"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/pay"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 android:gravity="center" />
 
@@ -51,7 +51,7 @@
                 android:layout_toRightOf="@id/button_records_pay"
                 style="@style/Widget.AppCompat.Button"
                 android:text="@string/all"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="25sp"
                 android:gravity="center" />
         </RelativeLayout>

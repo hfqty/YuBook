@@ -27,7 +27,7 @@
             android:layout_gravity="center"
             android:text="@string/new_record"
             android:textSize="25sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -39,7 +39,7 @@
             android:layout_marginTop="7dp"
             android:text="@string/records"
             android:textSize="25sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -121,7 +121,7 @@
             android:layout_gravity="center"
             android:text="@string/new_account"
             android:textSize="16dp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -133,7 +133,7 @@
             android:layout_gravity="center"
             android:text="@string/new_incomesource"
             android:textSize="16sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -145,7 +145,7 @@
             android:layout_gravity="center"
             android:text="@string/new_paytype"
             android:textSize="16sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -158,7 +158,7 @@
             android:layout_gravity="center"
             android:text="@string/settings"
             android:textSize="16sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
 
@@ -170,7 +170,7 @@
             android:layout_marginTop="7dp"
             android:text="@string/share"
             android:textSize="16sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:background="@drawable/button_gradient_background"
             style="@style/Widget.AppCompat.Button" />
         <Button
@@ -180,7 +180,7 @@
             android:layout_marginTop="7dp"
             android:layout_gravity="center"
             android:text="@string/about_app"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="16sp"
             android:background="@drawable/button_gradient_background" />
     </LinearLayout>

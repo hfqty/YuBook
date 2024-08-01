@@ -106,7 +106,7 @@
             android:layout_height="52dp"
             android:text="@string/btn_records"
             android:textSize="25sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:gravity="center" />
         <Button
             android:background="@drawable/button_gradient_background"
@@ -116,7 +116,7 @@
             android:layout_marginTop="7dp"
             android:text="@string/back"
             android:textSize="25sp"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:gravity="center" />
     </LinearLayout>
 </ScrollView>
